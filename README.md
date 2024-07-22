@@ -48,6 +48,34 @@ Follow [these instructions](https://github.com/ChrisAdkin8/Docker-Vault) for spi
 - Docker to be installed on MacOS
 - A Vault Enterprise license, specifically you will require the license key for this
 
+## HashiCorp Vault WIF Tutorial
+
+1. Confirm the VAULT_ADDR is set to http://localhost:8200
+```
+% env | grep VAULT_ADDR
+```
+
+2. Check the status of Vault:
+```
+% vault status 
+Key             Value
+---             -----
+Seal Type       shamir
+Initialized     true
+Sealed          false
+Total Shares    5
+Threshold       3
+Version         1.16.2+ent
+Build Date      2024-04-22T16:26:15Z
+Storage Type    file
+Cluster Name    vault-cluster-de2d1755
+Cluster ID      8f8dd09e-2854-e91a-1988-950db4ad64b9
+HA Enabled      false
+```
+
+
+
+
   
 
 
