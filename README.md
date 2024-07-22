@@ -104,6 +104,105 @@ this should produce output (pretty printed) which looks similar to this:
 }
 ```
 
+4. To obtain the certificate for the fingerprint, use the following curl command:
+```
+openssl s_client -servername <YOUR_DOMAIN_NAME> -showcerts -connect <YOUR_DOMAIN_NAME>:443
+```
+
+if your domain name is (for example) vault.chris-adkin.sbx.hashidemos.io, use:
+```
+openssl s_client -servername vault.chris-adkin.sbx.hashidemos.io -showcerts -connect vault.chris-adkin.sbx.hashidemos.io:443
+```
+
+scroll up the output from this command and grab the latest certificate block that appears in it, for example:
+```
+.
+.
+.
+-----BEGIN CERTIFICATE-----
+MIIEVzCCAj+gAwIBAgIRAIOPbGPOsTmMYgZigxXJ/d4wDQYJKoZIhvcNAQELBQAw
+TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh
+cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjQwMzEzMDAwMDAw
+WhcNMjcwMzEyMjM1OTU5WjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg
+RW5jcnlwdDELMAkGA1UEAxMCRTUwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAAQNCzqK
+a2GOtu/cX1jnxkJFVKtj9mZhSAouWXW0gQI3ULc/FnncmOyhKJdyIBwsz9V8UiBO
+VHhbhBRrwJCuhezAUUE8Wod/Bk3U/mDR+mwt4X2VEIiiCFQPmRpM5uoKrNijgfgw
+gfUwDgYDVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD
+ATASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBSfK1/PPCFPnQS37SssxMZw
+i9LXDTAfBgNVHSMEGDAWgBR5tFnme7bl5AFzgAiIyBpY9umbbjAyBggrBgEFBQcB
+AQQmMCQwIgYIKwYBBQUHMAKGFmh0dHA6Ly94MS5pLmxlbmNyLm9yZy8wEwYDVR0g
+BAwwCjAIBgZngQwBAgEwJwYDVR0fBCAwHjAcoBqgGIYWaHR0cDovL3gxLmMubGVu
+Y3Iub3JnLzANBgkqhkiG9w0BAQsFAAOCAgEAH3KdNEVCQdqk0LKyuNImTKdRJY1C
+2uw2SJajuhqkyGPY8C+zzsufZ+mgnhnq1A2KVQOSykOEnUbx1cy637rBAihx97r+
+bcwbZM6sTDIaEriR/PLk6LKs9Be0uoVxgOKDcpG9svD33J+G9Lcfv1K9luDmSTgG
+6XNFIN5vfI5gs/lMPyojEMdIzK9blcl2/1vKxO8WGCcjvsQ1nJ/Pwt8LQZBfOFyV
+XP8ubAp/au3dc4EKWG9MO5zcx1qT9+NXRGdVWxGvmBFRAajciMfXME1ZuGmk3/GO
+koAM7ZkjZmleyokP1LGzmfJcUd9s7eeu1/9/eg5XlXd/55GtYjAM+C4DG5i7eaNq
+cm2F+yxYIPt6cbbtYVNJCGfHWqHEQ4FYStUyFnv8sjyqU8ypgZaNJ9aVcWSICLOI
+E1/Qv/7oKsnZCWJ926wU6RqG1OYPGOi1zuABhLw61cuPVDT28nQS/e6z95cJXq0e
+K1BcaJ6fJZsmbjRgD5p3mvEf5vdQM7MCEvU0tHbsx2I5mHHJoABHb8KVBgWp/lcX
+GWiWaeOyB7RP+OfDtvi2OsapxXiV7vNVs7fMlrRjY1joKaqmmycnBvAq14AEbtyL
+sVfOS66B8apkeFX2NY4XPEYV4ZSCe8VHPrdrERk2wILG3T/EGmSIkCYVUMSnjmJd
+VQD9F6Na/+zmXCc=
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=CN=vault.chris-adkin.sbx.hashidemos.io
+issuer=C=US, O=Let's Encrypt, CN=E5
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: ECDSA
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 2416 bytes and written 407 bytes
+Verification: OK
+---
+New, TLSv1.3, Cipher is TLS_AES_128_GCM_SHA256
+Server public key is 256 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_128_GCM_SHA256
+    Session-ID: 3B68B23120C80C29E666642990AF42BD3C53E0BD2312F1FB8C1E74F27ED3D6B4
+    Session-ID-ctx: 
+    Resumption PSK: B1E781631C09AA3104895178579954C9C322821260F72AA2FDE092CA1BE6DA0A
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 604800 (seconds)
+    TLS session ticket:
+    0000 - 90 31 fe 03 75 39 43 25-1d ab 67 8d fe 8d 53 2d   .1..u9C%..g...S-
+    0010 - ae 43 29 df 19 6d c3 21-a9 8a 7a c1 c8 5d 19 b2   .C)..m.!..z..]..
+    0020 - 00 84 06 f0 5e fa 15 15-ea fd c5 27 78 df 7c 66   ....^......'x.|f
+    0030 - 53 f6 54 6d d3 30 34 26-04 88 1c d3 a3 c3 5a 28   S.Tm.04&......Z(
+    0040 - c1 ca 60 04 28 e2 6c 4a-5c b8 56 87 37 3b 44 61   ..`.(.lJ\.V.7;Da
+    0050 - 1e 7a 97 7c 47 b5 e1 17-df f3 6c 94 c2 3b 16 ac   .z.|G.....l..;..
+    0060 - 7f 68 b5 5a 90 6c 15 35-93                        .h.Z.l.5.
+
+    Start Time: 1721662261
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+```
+
+Save the certificate a file called certificate.crt.
+
+5. Execute the following command in order to obtain the thumb print:
+```
+openssl x509 -in certificate.crt -fingerprint -sha1 -noout | awk '{ print substr($2, 13, 59) }' | awk '{gsub(":", ""); print}'
+```
 
 
   
