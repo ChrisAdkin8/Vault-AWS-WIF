@@ -46,7 +46,9 @@ ngrok http http://localhost:8200  --domain=<YOUR_DOMAIN_NAME>
 
 Follow [these instructions](https://github.com/ChrisAdkin8/Docker-Vault) for spinning up Vault inside a docker container, note that you will require:
 - Docker to be installed on MacOS
-- A Vault Enterprise license, specifically you will require the license key for this  
+- A Vault Enterprise license, specifically you will require the license key for this
+
+  
 
 
 
