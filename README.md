@@ -2,9 +2,10 @@
 
 This repo is intended to help demonstrate workdload identity federation (WIF) which is available with HashiCorp Vault Enterprise from version 1.16 onwards.
 
+
 # Instructions
 
-## Configuring OIDS and JWKS Endpoint Access to AWS
+## Configuring OIDC and JWKS Endpoint Access to AWS
 
 1. The demo in this repo has been tested on MacOs, the first step is to install ngrok:
 ```
@@ -41,7 +42,9 @@ the TLS timeout specified when the cname record was created, i.e. the longer thi
 ngrok http http://localhost:8200  --domain=<YOUR_DOMAIN_NAME>
 ```
 
-10. Follow [these instructions](https://github.com/ChrisAdkin8/Docker-Vault) for spinning up Vault inside a docker container, note that you will require:
+## Spinning Up Vault on Docker
+
+Follow [these instructions](https://github.com/ChrisAdkin8/Docker-Vault) for spinning up Vault inside a docker container, note that you will require:
 - Docker to be installed on MacOS
 - A Vault Enterprise license, specifically you will require the license key for this  
 
