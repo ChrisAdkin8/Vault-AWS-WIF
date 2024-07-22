@@ -74,9 +74,9 @@ HA Enabled      false
 ```
 
 3. Open the OIDC endpoint in a browser in order to obtain the JWKS URI, for example if the domain you are using is:
-
+```
 vault.chris-adkin.sbx.hashidemos.io
-
+```
 the URL you need to obtain in a browser is:
 
 https://vault.chris-adkin.sbx.hashidemos.io/v1/identity/oidc/plugins/.well-known/openid-configuration
