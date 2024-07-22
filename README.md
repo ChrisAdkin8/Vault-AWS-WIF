@@ -6,8 +6,7 @@ This repo is intended to help demonstrate workdload identity federation (WIF) wh
 
 ## Configuring OIDS and JWKS Endpoint Access to AWS
 
-<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/golden_image_workflow.png?raw=true">
-
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/01-route-53-hosted-domain.png?raw=true">
 
 
 
