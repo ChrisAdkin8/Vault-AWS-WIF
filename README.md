@@ -26,7 +26,8 @@ cname value for use in the next step:
 5. Create a CNAME record for the hosted domain, use vault as the sub domain and the cname value obtained in the previous step, hit "Create records":
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/03-route-53-creation.png?raw=true">
 
-6.   
+6. Return to the ngrok enterprise page and note the message stating a TLS certificate is being created, the amount of time you will have to wait will be dependent upon
+the TLS timeout specified when the cname record was created, i.e. the longer this is, the longer you will have to wait for a TLS cert:  
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/04-ngrok-cert-creation.png?raw=true">
 
 7.
