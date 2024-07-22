@@ -33,8 +33,13 @@ the TLS timeout specified when the cname record was created, i.e. the longer thi
 7. Clicking on the screen icon containing >_ in the top right hand corner of the ngrok page will provide the ngrok command for creating a tunnel, this will be required later:
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/05-ngrok-start-a-tunnel.png?raw=true">
 
-8. Once your domain is ready to use a TLS cert will appear on the main domain page to the right of your domain name:
+8. Once your domain is ready - a TLS cert will appear on the main domain page to the right of your domain name:
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/06-ngrok-domain-ready.png?raw=true">
+
+9. Create a tunnel as follows from within zsh:
+```
+ngrok http http://localhost:8200  --domain=<YOUR_DOMAIN_NAME>
+```
 
 
 
