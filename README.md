@@ -73,6 +73,36 @@ Cluster ID      8f8dd09e-2854-e91a-1988-950db4ad64b9
 HA Enabled      false
 ```
 
+3. Open the OIDC endpoint in a browser in order to obtain the JWKS URI, for example if the domain you are using is:
+
+vault.chris-adkin.sbx.hashidemos.io
+
+the URL you need to obtain in a browser is:
+
+https://vault.chris-adkin.sbx.hashidemos.io/v1/identity/oidc/plugins/.well-known/openid-configuration
+
+this should produce output (pretty printed) which looks similar to this:
+```
+{
+  "issuer": "http://127.0.0.1:8200/v1/identity/oidc/plugins",
+  "jwks_uri": "http://127.0.0.1:8200/v1/identity/oidc/plugins/.well-known/keys",
+  "response_types_supported": [
+    "id_token"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256",
+    "RS384",
+    "RS512",
+    "ES256",
+    "ES384",
+    "ES512",
+    "EdDSA"
+  ]
+}
+```
 
 
 
