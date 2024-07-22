@@ -41,5 +41,8 @@ the TLS timeout specified when the cname record was created, i.e. the longer thi
 ngrok http http://localhost:8200  --domain=<YOUR_DOMAIN_NAME>
 ```
 
+10. Follow these instructions for spinning up Vault inside a docker container, note that you will require:
+    -  
+
 
 
