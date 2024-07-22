@@ -6,11 +6,20 @@ This repo is intended to help demonstrate workdload identity federation (WIF) wh
 
 ## Configuring OIDS and JWKS Endpoint Access to AWS
 
-1111
+1. The demo in this repo has been tested on MacOs, the first step is to install ngrok:
+```
+brew install ngrok
+```
 
+2. Connect your ngrok agent to your ngrok account (sign up for an ngrok account if you haven't done so already) and then copy your ngrok authtoken from your ngrok dashboard:
+```
+ngrok config add-authtoken <TOKEN>
+```   
+
+3. Obtain the name of a hosted domain from the Route 53 section of the AWS console:
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/01-route-53-hosted-domain.png?raw=true">
 
-2222
+4. Create a new domain in the ngrok enterprise console based on the hosted domain obtained from the previous step, append the name of the hosted domain onto 'vault.':
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/02-ngrok-domain-creation.png?raw=true">
 3333
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/03-route-53-creation.png?raw=true">
