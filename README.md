@@ -30,7 +30,7 @@ cname value for use in the next step:
 the TLS timeout specified when the cname record was created, i.e. the longer this is, the longer you will have to wait for a TLS cert:  
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/04-ngrok-cert-creation.png?raw=true">
 
-7.
+7. Clicking on the screen icon containing >_ in the top right hand corner of the ngrok page will provide the ngrok command for creating a tunnel, this will be required later:
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/ChrisAdkin8/Vault-AWS-WIF/blob/main/png_images/05-ngrok-start-a-tunnel.png?raw=true">
 
 8.
