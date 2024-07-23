@@ -213,6 +213,15 @@ For example if your ngrok domain is vault.chris-adkin.sbx.hashidemos.io, set the
 export ISSUER=http://vault.chris-adkin.sbx.hashidemos.io
 ```
 
+## Create The AWS OIDC Provider with Terraform
+
+1. Clone this repo:
+```
+git clone . . . 
+```
+
+2. 
+
   
 
 
