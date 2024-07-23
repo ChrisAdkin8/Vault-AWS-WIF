@@ -201,9 +201,13 @@ Save the certificate a file called certificate.crt.
 
 5. Execute the following command in order to obtain the thumb print:
 ```
-openssl x509 -in certificate.crt -fingerprint -sha1 -noout | awk '{ print substr($2, 13, 59) }' | awk '{gsub(":", ""); print}'
+export THUMBPRINT=$(openssl x509 -in certificate.crt -fingerprint -sha1 -noout | awk '{ print substr($2, 13, 59) }' | awk '{gsub(":", ""); print}')
 ```
 
+6. Set the ISSUER environment variable to the ngrok tunnel routing destination:
+```
+export ISSUER=http://127.0.0.1:8200
+```   
 
   
 
