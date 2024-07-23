@@ -220,7 +220,32 @@ export ISSUER=http://vault.chris-adkin.sbx.hashidemos.io
 git clone . . . 
 ```
 
-2. Create the ISSUE TF_VAR_ environment variables
+2. Create the ISSUE TF_VAR_ environment variable for the issuer
+```
+export TF_VAR_issuer=$ISSUER
+```
+
+3. Create the ISSUE TF_VAR_ environment variable for the issuer
+```
+export TF_VAR_issuer=$ISSUER
+```
+
+4. cd to the terraform directory:
+```
+$ cd terraform
+```
+
+5. Download and install the terraform plugins required by the configuration:
+```
+$ terraform init
+```
+
+6. Apply the configuration:
+```
+$ terraform apply -auto-approve
+```   
+
+
 
   
 
