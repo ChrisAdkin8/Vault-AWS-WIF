@@ -225,9 +225,9 @@ git clone . . .
 export TF_VAR_issuer=$ISSUER
 ```
 
-3. Create the ISSUE TF_VAR_ environment variable for the issuer
+3. Create the ISSUE TF_VAR_ environment variable for the thumb print
 ```
-export TF_VAR_issuer=$ISSUER
+export TF_VAR_thumbprint=$THUMBPRINT
 ```
 
 4. cd to the terraform directory:
