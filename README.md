@@ -220,7 +220,7 @@ export ISSUER=http://vault.chris-adkin.sbx.hashidemos.io
 git clone . . . 
 ```
 
-2. 
+2. Create the ISSUE TF_VAR_ environment variables
 
   
 
