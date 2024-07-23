@@ -206,8 +206,12 @@ export THUMBPRINT=$(openssl x509 -in certificate.crt -fingerprint -sha1 -noout |
 
 6. Set the ISSUER environment variable to the ngrok tunnel routing destination:
 ```
-export ISSUER=http://127.0.0.1:8200
-```   
+export ISSUER=<NGROK_DOMAIN>
+```
+For example if your ngrok domain is vault.chris-adkin.sbx.hashidemos.io, set the issuer as follows:
+```
+export ISSUER=http://vault.chris-adkin.sbx.hashidemos.io
+```
 
   
 
